@@ -1,8 +1,11 @@
----
-- name: Hello World!
-  hosts: all
- 
+- name: Create Azure Resource
+  hosts: localhost
+  connection: local
   tasks:
- 
-  - name: Hello World!
-    shell: echo "Hi! Tower is working."
+  - name: Create a resource group
+    azure_rm_resourcegroup:
+      name: myResourceGroup
+      location: westus
+      tags:
+        testing: testing
+        delete: never	
