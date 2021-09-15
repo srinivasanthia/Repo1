@@ -1,9 +1,8 @@
---- 
-- 
-  azure_rm_resourcegroup: 
-    location: westus
-    name: myResourceGroup
-    tags: 
-      delete: never
-      testing: testing
-  name: "Create a resource group"
+---
+- name: Hello World!
+  hosts: all
+ 
+  tasks:
+ 
+  - name: Hello World!
+    shell: echo "Hi! Tower is working."
